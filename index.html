@@ -17,10 +17,20 @@
     rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- sticky nav -->
+   <script>
+  $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
 
-
+    if (scroll >= 80) {
+        $(".navbar").addClass("darkHeader");
+    } else {
+        $(".navbar").removeClass("darkHeader");
+    }
+});
+</script>
 
 </head>
 
@@ -1020,8 +1030,8 @@
   </script>
 
   <!-- swiper slider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/script.js/2.0.2/script.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -1044,32 +1054,8 @@
 
   </script>
   
- <!-- <script>
-  $(document).ready(function(){
-      $(window).scroll(function(){
-          if ($(this).scrollTop() > 100) {
-              $(".navbar").addClass("fixednav");
-          } else {
-              $(".navbar").removeClass("fixednav");
-          }
-      });
-  });
-</script> -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-      const header = document.querySelector('.nav'); // Select the navigation bar
-      if (!header) return; // Exit if the .nav element does not exist
 
-      // Add scroll event listener
-      window.addEventListener('scroll', function () {
-          if (window.scrollY > 50) {
-              header.classList.add('sticky'); // Add sticky class when scrolled down
-          } else {
-              header.classList.remove('sticky'); // Remove sticky class when at the top
-          }
-      });
-  });
-</script>
+
 </body>
 
 </html>
